@@ -1,0 +1,10 @@
+
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+
+}

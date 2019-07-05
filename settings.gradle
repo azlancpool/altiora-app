@@ -4,3 +4,5 @@ pluginManagement {
 	}
 }
 rootProject.name = 'altiora-app'
+include 'altiora-client'
+include 'altiora-core'
