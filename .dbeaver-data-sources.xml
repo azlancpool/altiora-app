@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="h2_embedded-16bc07b1f40-3665e7641aa08197" provider="generic" driver="h2_embedded" name="H2 - testdb" save-password="false" read-only="false">
+		<connection server="" database="mem:testdb" url="jdbc:h2:mem:testdb" user="sa" type="dev"/>
+	</data-source>
+	<filters/>
+</data-sources>

@@ -41,6 +41,6 @@ public class ItemDTO implements Serializable{
 	 * Item price per unit.
 	 */
 	@Column(name="UNIT_PRICE")
-	private float unitPrice;
+	private Float unitPrice;
 	
 }

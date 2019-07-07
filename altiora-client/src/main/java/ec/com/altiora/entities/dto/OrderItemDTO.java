@@ -31,14 +31,14 @@ public class OrderItemDTO implements Serializable{
 	 */
 	@Id
 	@Column(name="ID_ORDER_ITEM")
-	private int idClient;
+	private Integer idClient;
 	
 	/**
 	 * ALT_ORDER_ITEM table identificator.
 	 */
 	@Id
 	@Column(name="ID_ORDER")
-	private int idOrder;
+	private Integer idOrder;
 	
 	/**
 	 * Order date.
@@ -50,13 +50,13 @@ public class OrderItemDTO implements Serializable{
 	 * Item quantity. 
 	 */
 	@Column(name="QUANTITY")
-	private int quantity;
+	private Integer quantity;
 	
 	/**
 	 * Item price when that was sold. 
 	 */
 	@Column(name="PRICE")
-	private float price;
+	private Float price;
 	
 	/**
 	 * Order relation.
