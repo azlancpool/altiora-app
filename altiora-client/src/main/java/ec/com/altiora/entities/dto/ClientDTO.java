@@ -7,7 +7,10 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -28,8 +31,10 @@ public class ClientDTO implements Serializable{
 	 * ALT_CLIENT table identificator.
 	 */
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+	@SequenceGenerator(name = "sequence", sequenceName = "ALT_SEQ_CLIENT", allocationSize=1)
 	@Column(name="ID_CLIENT")
-	private int idClient;
+	private Integer idClient;
 	
 	/**
 	 * Client name.
