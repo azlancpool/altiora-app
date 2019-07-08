@@ -31,7 +31,7 @@ public class OrderItemDTO implements Serializable{
 	 */
 	@Id
 	@Column(name="ID_ORDER_ITEM")
-	private Integer idClient;
+	private Integer idOrderItem;
 	
 	/**
 	 * ALT_ORDER_ITEM table identificator.
@@ -62,7 +62,7 @@ public class OrderItemDTO implements Serializable{
 	 * Order relation.
 	 */
 	@ManyToOne
-	@JoinColumn(name = "ID_ORDER", referencedColumnName = "ID_ORDER", insertable = false, updatable = false)
+    @JoinColumn(name="ID_ORDER", referencedColumnName = "ID_ORDER", insertable = false, updatable = false, nullable=false)
 	private OrderDTO orderDTO;
 	
 	/**
