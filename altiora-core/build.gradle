@@ -1,0 +1,13 @@
+
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    compile project(':altiora-client')
+    implementation 'org.springframework:spring-context:5.1.8.RELEASE'
+    implementation 'org.springframework:spring-tx:5.1.8.RELEASE'
+    implementation 'org.hibernate:hibernate-core:5.2.16.Final'
+    implementation 'org.slf4j:slf4j-api:1.7.26'
+    
+}

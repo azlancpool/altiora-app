@@ -1,0 +1,12 @@
+
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+    implementation group: 'com.fasterxml.jackson.core', name:'jackson-databind', version :'2.9.0'
+    implementation group: 'com.fasterxml.jackson.core', name:'jackson-annotations', version :'2.5.4'
+
+}

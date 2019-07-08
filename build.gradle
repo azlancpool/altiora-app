@@ -1,8 +1,21 @@
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+      url "https://repo1.maven.org/maven2"
+    }
+  }
+  dependencies {
+    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2"
+  }
+}
+
 plugins {
 	id 'org.springframework.boot' version '2.1.6.RELEASE'
 	id 'java'
 	id 'war'
 }
+
 
 apply plugin: 'io.spring.dependency-management'
 
@@ -10,13 +23,32 @@ group = 'ec.com.altiora'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
-repositories {
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'ec.com.altiora'
+  version = "1.0.0-RELEASE"
+  
+  repositories {
 	mavenCentral()
+  }
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+  
+  repositories {
+	mavenCentral()
+  }
 }
 
 dependencies {
+	compile project(':altiora-core')
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'com.h2database:h2'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
